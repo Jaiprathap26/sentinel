@@ -1,6 +1,6 @@
 from pydantic_settings import BaseSettings
 
-class Settingss(BaseSettings):
+class Settings(BaseSettings):
     app_name: str = "SENTINEL"
     debug: bool = False
     gemini_api_key: str = ""
@@ -10,5 +10,5 @@ class Settingss(BaseSettings):
         env_file = ".env"
 
 
-settings = Settingss()
+settings = Settings()
 
