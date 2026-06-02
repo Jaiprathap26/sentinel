@@ -8,5 +8,5 @@ def get_gemini_model(model_name: str = "gemini-1.5-flash"):
 
 async def analyze_code(prompt: str)-> str:
     model = get_gemini_model()
-    response = await model.generate_content(prompt)
+    response = await model.generate_content_async(prompt)
     return response.text
