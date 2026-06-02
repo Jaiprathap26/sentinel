@@ -6,7 +6,7 @@ genai.configure(api_key=settings.gemini_api_key)
 def get_gemini_model(model_name: str = "gemini-1.5-flash"):
     return genai.GenerativeModel(model_name)
 
-def analyze_code(prompt: str)-> str:
+async def analyze_code(prompt: str)-> str:
     model = get_gemini_model()
-    response = model.generate_content(prompt)
+    response = await model.generate_content(prompt)
     return response.text
